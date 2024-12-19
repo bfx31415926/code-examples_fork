@@ -9,7 +9,7 @@ fun main() = runBlocking {
         println("Throwing exception from launch")
         throw IndexOutOfBoundsException() // Will be printed to the console by Thread.defaultUncaughtExceptionHandler
     }
-    job.join()
+//    job.join()
     println("Joined failed job")
     val deferred = GlobalScope.async { // root coroutine with async
         println("Throwing exception from async")
